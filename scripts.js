@@ -24,13 +24,13 @@ console.log(computerPlay(computerSelection));
 */
 let playerSelection = ["Rock", "Paper", "Scissors"];
 let computerSelection = ["Rock", "Paper", "Scissors"];
-//regexp = /rock paper scissors/gi; // with flags g,m and i (to be covered soon)
+let reg = /(rock) (paper) (scissors)/gi;
 
 
 function playRound (computerSelection , playerSelection){
 
  playerSelection = prompt("Do you choose Rock, Paper or Scissors?");
-
+ 
  computerSelection = Math.floor(Math.random() * computerSelection.length);
 
 
@@ -92,7 +92,7 @@ if (computerSelection == "Scissors") {
 
 };
 
-console.log(playRound(computerSelection, playerSelection));
+document.write(playRound(computerSelection, playerSelection));
 
 
 
