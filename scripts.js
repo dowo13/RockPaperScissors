@@ -12,7 +12,7 @@ const playerSelection = "rock";
 
 
 
-function computerPlay (computerSelection) {
+function computerPlay (computerSelection1) {
     
 return computerSelection1[Math.floor(Math.random() * computerSelection1.length)]
 
@@ -22,37 +22,77 @@ return computerSelection1[Math.floor(Math.random() * computerSelection1.length)]
 /*
 console.log(computerPlay(computerSelection));
 */
-const playerSelection = "rock";
-let computerSelection = ["rock", "paper", "scissors"];
+let playerSelection = ["Rock", "Paper", "Scissors"];
+let computerSelection = ["Rock", "Paper", "Scissors"];
+//regexp = /rock paper scissors/gi; // with flags g,m and i (to be covered soon)
 
-function playRound (playerSelection, computerSelection){
 
-   playerSelection;
-computerSelection = Math.floor(Math.random() * computerSelection.length);
+function playRound (computerSelection , playerSelection){
 
-if (computerSelection == [0]){
+ playerSelection = prompt("Do you choose Rock, Paper or Scissors?");
 
-   computerSelection = "rock";
+ computerSelection = Math.floor(Math.random() * computerSelection.length);
 
-return "Computer chooses Rock - Draw, play again ?";
 
-} else if (computerSelection
-   == [1]){
+  if (computerSelection == [0]){
+
+   computerSelection = "Rock";
+   
+} else if (computerSelection == [1]){
 
       computerSelection = "Paper";
+      
+}  else {
 
-      return "Computer chooses Paper, Computer  Wins, Bad luck";
+         computerSelection =  "Scissors";
+      };
+
+      if (computerSelection == playerSelection) {
+
+         return  "Game drawn, play again?";
+
+} else if (computerSelection == "Rock"){
+   if (playerSelection == "Paper"){
+
+      return "You win - Paper beats Rock";
+
+   }else {
+      return "You lose, Scissors beats paper";
    }
-   else {
+}
 
-      computerSelection =  "scissors";
+if (computerSelection == "Paper") {
 
-      return "You win!!! Computer chooses Scissors";
-   };
+   if (playerSelection == "Scissors") {
+
+return "You win, Scissors beats Paper";
+
+   } else {
+       
+      return "Game drawn, play again?";
+   }
+} 
+
+if (computerSelection == "Scissors") {
+   
+   if (playerSelection == "Rock") {
+
+      return "You win, Rock beats Scissors";
+   } else {
+       
+      return "Game drawn, play again?";
+   }
+}
+     
+
+      
+
+
+   
 
 };
-console.log("Player always chooses " + playerSelection);
-console.log(playRound(playerSelection, computerSelection));
+
+console.log(playRound(computerSelection, playerSelection));
 
 
 
