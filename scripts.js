@@ -29,30 +29,30 @@ let reg = /(rock) (paper) (scissors)/gi;
 
 function playRound (computerSelection , playerSelection){
 
- playerSelection = prompt("Do you choose Rock, Paper or Scissors?");
+ playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
  
  computerSelection = Math.floor(Math.random() * computerSelection.length);
 
 
   if (computerSelection == [0]){
 
-   computerSelection = "Rock";
+   computerSelection = "rock";
    
 } else if (computerSelection == [1]){
 
-      computerSelection = "Paper";
+      computerSelection = "paper";
       
 }  else {
 
-         computerSelection =  "Scissors";
+         computerSelection =  "scissors";
       };
 
       if (computerSelection == playerSelection) {
 
          return  "Game drawn, play again?";
 
-} else if (computerSelection == "Rock"){
-   if (playerSelection == "Paper"){
+} else if (computerSelection == "rock"){
+   if (playerSelection == "paper"){
 
       return "You win - Paper beats Rock";
 
@@ -61,9 +61,9 @@ function playRound (computerSelection , playerSelection){
    }
 }
 
-if (computerSelection == "Paper") {
+if (computerSelection == "paper") {
 
-   if (playerSelection == "Scissors") {
+   if (playerSelection == "scissors") {
 
 return "You win, Scissors beats Paper";
 
@@ -73,9 +73,9 @@ return "You win, Scissors beats Paper";
    }
 } 
 
-if (computerSelection == "Scissors") {
+if (computerSelection == "scissors") {
    
-   if (playerSelection == "Rock") {
+   if (playerSelection == "rock") {
 
       return "You win, Rock beats Scissors";
    } else {
