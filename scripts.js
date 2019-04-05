@@ -38,15 +38,16 @@ console.log(computerPlay(computerSelection));
    console.log(computerPlay(computerSelection));
    */
    //let playerSelection = ["Rock", "Paper", "Scissors"];
+
    let playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
-   let computerSelection = ["Rock", "Paper", "Scissors"];
+   let computerSelection = ["rock", "paper", "scissors"];
    let computerWins= 0;
    let playerWins = 0;
    let tied = 0;
-   
 
    function playRound (computerSelection , playerSelection){
-      
+
+
     computerSelection = Math.floor(Math.random() * computerSelection.length);
    
      if (computerSelection == [0]){
@@ -138,8 +139,9 @@ console.log(computerPlay(computerSelection));
       
         for (i=0; i<4;i++){
             
+         
          playRound(computerSelection, playerSelection);
-         playerSelection = prompt("Do you choose rock, paper or scissors?");
+         playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
          computerSelection = ["Rock", "Paper", "Scissors"];
          
       }
@@ -170,9 +172,11 @@ console.log(computerPlay(computerSelection));
 //score1();
    
    function game (){
-
+   
+      
     playRound (computerSelection , playerSelection);
    score1();
 };
+
 game();
 
