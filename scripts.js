@@ -39,14 +39,50 @@ console.log(computerPlay(computerSelection));
    */
    //let playerSelection = ["Rock", "Paper", "Scissors"];
 
-   let playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
+   
+   
+  // let button = document.getElementsByClassName("button").onclick = playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
+
+  //let button = undefined;
+
+ /* function button1() {
+  
+
+    let playerSelection = prompt("Do you choose rock, paper or scissors?")
+    playerSelection = playerSelection.toLowerCase();
+    let computerSelection = ["rock", "paper", "scissors"];
+
+   playRound(computerSelection, playerSelection);
+   //game();
+   //score1();
+   //winner();
+   //round();
+  };*/
+   let playerSelection;// prompt("Do you choose rock, paper or scissors?").toLowerCase();
    let computerSelection = ["rock", "paper", "scissors"];
-   let computerWins= 0;
+   let computerWins = 0;
    let playerWins = 0;
    let tied = 0;
+   let button = '';
+
+   /*const refresh = document.createElement('button')
+   refresh.appendChild('refresh');
+   refresh.textContent = "play again";
+   /*function toggle_visibility(button) {
+      button = document.getElementsByClassName(button);
+     if(button.style.display == 'block'){
+        button.style.display = 'none';}
+     else {
+        button.style.display = 'block';
+    }
+  };
+  */
 
    function playRound (computerSelection , playerSelection){
-
+      
+     playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
+     //playerSelection = playerSelection.toLowerCase();
+     computerSelection = ["rock", "paper", "scissors"];
 
     computerSelection = Math.floor(Math.random() * computerSelection.length);
    
@@ -58,125 +94,122 @@ console.log(computerPlay(computerSelection));
    
          computerSelection = "paper";
          
-   }  else if (computerSelection == [2]){
+   }  else {computerSelection == [2]
 
             computerSelection = "scissors";
-   }
+   };
    
          if (computerSelection == playerSelection) {
-   
-            tied++
 
-            return "Game drawn, play again?";
-   
-   } else if (computerSelection == "rock" && playerSelection == "paper"){
+          tied++
+
+          alert (/*document.getElementById("round").innerHTML=*/"Game drawn, play again?");
+           
+      } else if (computerSelection == "rock" && playerSelection == "paper"){
 
          playerWins++
 
-         return "You win - Paper beats Rock";
+         alert (/*document.getElementById("round").innerHTML=*/ "You win - Paper beats Rock");
          
-   
-      }else if (computerSelection == "scissors" && playerSelection == "paper"){
+      } else if (computerSelection == "scissors" && playerSelection == "paper"){
 
-        computerWins++
-
-          return "You lose, Scissors beats paper";
-      }
-   
-   
-   if (computerSelection == "paper" && playerSelection == "scissors") {
-   
-       playerWins++
-
-       return "You win, Scissors beats Paper";
-   
-   
-      } else if (computerSelection == playerSelection){
+          computerWins++
           
-         tied++
+          alert (/*document.getElementById("round").innerHTML=*/"You lose, Scissors beats paper");
 
-         return "Game drawn, play again?";
-      }
-   
-   
-   if (computerSelection == "scissors" && playerSelection == "rock") {
+      }  else if (computerSelection == "paper" && playerSelection == "scissors") {
 
        playerWins++
 
-      return "You win, Rock beats Scissors";
+       alert (/*document.getElementById("round").innerHTML=*/"You win, Scissors beats Paper");
+   
+      } else if (computerSelection == "scissors" && playerSelection == "rock") {
 
-      } else if (computerSelection == playerSelection) {
-          
-         tied++
-        return "Game drawn, play again?";
-      }
+      playerWins++
 
-      if (computerSelection == "rock" && playerSelection == "scissors"){
+      alert (/*document.getElementById("round").innerHTML=*/"You win, Rock beats Scissors");
 
-        computerWins++
-         
-          return "You lose, Rock beats Scissors";
+      } else if (computerSelection == "rock" && playerSelection == "scissors"){
+
+          computerWins++;
+
+          alert (/*document.getElementById("round").innerHTML=*/"You lose, Rock beats Scissors");
       
-      } else if (computerSelection  == playerSelection){
-
-         tied++
-
-         return "Game drawn, play again?";
-      }
-
-
-      if (computerSelection == "paper" && playerSelection == "rock"){
+      } else if (computerSelection == "paper" && playerSelection == "rock"){
 
          computerWins++
 
-         return "You lose - Paper beats Rock";
+        alert (/*document.getElementById("round").innerHTML=*/ "You lose - Paper beats Rock");
       }
-      
    };
-   
 
-   function score1(){ 
+  function score1(){ 
       
         for (i=0; i<4;i++){
+         
+           playRound(computerSelection, playerSelection)
+        }
+        if (i=4) {
+           alert ("lets see who won");
+           gameWinner(playerWins, computerWins);
+          // toggle_visibility(button);
+           //location.reload(); 
+          // winner(playerWins, computerWins);
+           
+        }
+      };
+           
+         function gameWinner(playerWins, computerWins) {
+
+           if (playerWins > computerWins) {
+   
+            return  document.getElementById("results").innerHTML=
+                  '<img src="/home/dom/Downloads/500_F_197806198_RCtsw5K3VxS0ezhFFB1BFVf28sRqPPXgwin1.jpg" width="500" height="333"> ' +
+                   '<br> Player has  ' + playerWins + '  win(s) and is the winner!!' + '<br> <form action="/home/dom/RockPaperScissors/index.html">'
+                   + '<input type="submit" value="play again" />' + '</form>';
             
-         
-         playRound(computerSelection, playerSelection);
-         playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
-         computerSelection = ["Rock", "Paper", "Scissors"];
-         
-      }
-      
-      playerWins 
-      computerWins  
-      tied  
+         } else if (playerWins < computerWins) {
+            
+            return document.getElementById("results").innerHTML=
+                  '<img src="/home/dom/Downloads/you-lose-eps-vectors_csp10531132.jpg" width="500" height="333">' + 
+                  '<br> Computer has  ' + computerWins + '  win(s) - you lose !!!!' + '<br> <form action="/home/dom/RockPaperScissors/index.html">'
+                  + '<input type="submit" value="play again" />' + '</form>';
+               } else {
 
-      document.write("player has " + playerWins + " wins<br>");
-      document.write("computer has " + computerWins + " wins<br>" );
-      document.write("Games tied " + tied + "<br>");
-      
-   };
-     /*if (computerWins > playerWins){
+                  return document.getElementById("results").innerHTML=
+                        '<img src="/home/dom/Downloads/keep-calm-its-a-50-50-draw11.png" width="500" height="333">' + 
+                        '<br> The game is drawn. The computer won ' + computerWins + ' round(s) and Player won ' + playerWins + ' round(s) and '+ tied + 
+                        ' round(s) you made the same selection as the computer ' + '<br>'
+                        + '<form action="/home/dom/RockPaperScissors/index.html">' + '<input type="submit" value=" play again" />' + '</form>'; 
+               }
+            
+               
+      };
 
-      document.write("computer has " + computerWins + " wins and is the winner");
-
-     }else if (computerWins < playerWins){
-
-      document.write("player has " + playerWins + " wins and is the winner");
-
-   } else if (computerWins == playerWins) {
-
-      document.write("Game tied");
-   }*/
-
-//playRound(computerSelection, playerSelection);
-//score1();
-   
    function game (){
-   
-      
-    playRound (computerSelection , playerSelection);
-   score1();
-};
 
-game();
+   playRound (computerSelection , playerSelection);
+   score1();
+   
+   }; 
+
+   
+   /*function winner(playerWins, computerWins) {
+
+      if (playerWins < computerWins) {
+
+       return document.getElementById("winner").innerHTML='computer has ' +  computerWins;
+
+      } else if (playerWins > computerWins) {
+
+       return document.getElementById("winner").innerHTML='player has ' + playerWins;
+      } else {
+
+       return  document.getElementById("winner").innerHTML='games tied ' + tied;
+      }
+   };*/
+   
+
+  
+
 

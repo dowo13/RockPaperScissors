@@ -1,44 +1,132 @@
 /* styling for Rock Paper Scissors game*/
 
-body p h1{
+body {
+ 
+ background-color: black; 
+ /* background-color: yellow;
+  color: gold;
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+  padding: 25px 25px;
+  border: none;
+
   
   perspective: 1000px;
-  
+  */
 }
-.spinning {
+
+
+
+/*.button:hover {background-color: #3e8e41}
+
+.button:active {
+  
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*closing brace for button css above */
+
+/*.button { 
+/*glowing button
+  position: absolute;
+  left:40%;
+  padding: 65px 25px;
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color:darkslategray;
+  background-color: darkslategray;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px;
+/*this was where i inserted .button so anything above can be removed if the position is not right 
+
+
+    border-radius: 50%;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+   @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  
+
+/*  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 50px;
+  color:black;
+}
+/*.button:hover {
+
+}
+*/
+
+.rps {
+
 
   position: absolute;
 
-	
-
-  top: 50%;
+	top: 50%;
 
 
 
-  left: 50%;
+  left: 45%;
 
 
 
-  height: 30%;
+  height: 65%;
 
 
 
-  width: 50%;
+  width: 60%;
 
 
 
   margin: -15% 0 0 -25%;
 
-  background: black;
-  color: yellow;
-/* vertical-align: middle;
+  cursor: pointer;
+}
+
+p {
+
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*.startGame p {
+
+  color:silver;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 90%;
+}*/
+  
+  /* vertical-align: middle;
   width:500px;
     margin: 0 auto;
     background: silver;
     color: yellow;
     */
      
-  /*spinning code below here*/
+  /*spinning code below here
   text-align: center;
   animation-name: spin, depth;
   animation-timing-function: linear;
@@ -55,15 +143,78 @@ body p h1{
   50% { text-shadow: 0 0 black; }
   75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
   100% { text-shadow: 0 0 black; }
+}*/
+
+ /*.scores  {
+
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  height: 100px;
+  width: 300px;
+  color: yellow;
+  background-color: black;
+  font-size: 20px;
 }
 
-.java {
+a {
 
+  position: absolute;
+  left:  50%;
+  color:yellow;
+  text-align: center;
+  font-size: 30px;
+  
+}*/
+
+#results {
+
+
+   /* Full height */
+   height: 100%; 
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   /*original style*/
+  color:silver;
+  padding-top: 10%;
+  text-align: center;
+  font-size: 50px;
+}
+
+form input {
+
+  cursor: pointer;
+  font-size: 25px;
+  background-color:gold;
+  color: black;
+}
+#wins {
+  
+  text-align: center;
+  padding-top: 20%;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 60px;
-  color: blue;
+  font-size: 50px;
+  color: yellow;
+  
 }
-  
-  
-    
-      
+
+/*#refresh1 {
+
+  font-size: 25px;
+  text-align: center;
+  color: red;
+  padding-top: 200px;
+}*/
+
+/*#newpage, p {
+
+background-color: black;
+font-family: 'Courier New', Courier, monospace;
+color: yellow;
+}
+*/
+ 
