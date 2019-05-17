@@ -28,7 +28,7 @@ console.log(computerPlay(computerSelection));
    let computerWins = 0;
    let playerWins = 0;
    let tied = 0;
-   let button = '';
+   
 
    function playRound (computerSelection , playerSelection){
       
