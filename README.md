@@ -1,1 +1,2 @@
 # RockPaperScissors
+This is a game of Rock, Paper and Scissors. The project was to code in JavaScript a game that would play 5 rounds and use the 'prompt()' method for the users input. I also used the 'alert()' method after each round to let the user know who won that particular round. The final score is shown after the 5 rounds have been played and the winner along with their score is displayed. I also added the play again button in order to allow the player an easy rematch option.
