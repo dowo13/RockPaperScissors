@@ -6,7 +6,7 @@
 
 //Rock Paper Scissors Game 
 
-/* commented out for use later 
+/* commented out because this was the code for first part of project
 let computerSelection1 =  ["rock", "paper", "scissors"];
 const playerSelection = "rock";
 
@@ -23,68 +23,20 @@ return computerSelection1[Math.floor(Math.random() * computerSelection1.length)]
 console.log(computerPlay(computerSelection));
 */
 
-//let playerSelection = ["Rock", "Paper", "Scissors"];
-//let computerSelection = ["Rock", "Paper", "Scissors"];
-//let reg = /(rock) (paper) (scissors)/gi;
-
-
-
-
-/*function computerPlay (computerSelection1) {
-    
-   return computerSelection1[Math.floor(Math.random() * computerSelection1.length)]
-   }
-   
-   console.log(computerPlay(computerSelection));
-   */
-   //let playerSelection = ["Rock", "Paper", "Scissors"];
-
-   
-   
-  // let button = document.getElementsByClassName("button").onclick = playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
-
-  //let button = undefined;
-
- /* function button1() {
-  
-
-    let playerSelection = prompt("Do you choose rock, paper or scissors?")
-    playerSelection = playerSelection.toLowerCase();
-    let computerSelection = ["rock", "paper", "scissors"];
-
-   playRound(computerSelection, playerSelection);
-   //game();
-   //score1();
-   //winner();
-   //round();
-  };*/
-   let playerSelection;// prompt("Do you choose rock, paper or scissors?").toLowerCase();
+   let playerSelection;
    let computerSelection = ["rock", "paper", "scissors"];
    let computerWins = 0;
    let playerWins = 0;
    let tied = 0;
    let button = '';
 
-   /*const refresh = document.createElement('button')
-   refresh.appendChild('refresh');
-   refresh.textContent = "play again";
-   /*function toggle_visibility(button) {
-      button = document.getElementsByClassName(button);
-     if(button.style.display == 'block'){
-        button.style.display = 'none';}
-     else {
-        button.style.display = 'block';
-    }
-  };
-  */
-
    function playRound (computerSelection , playerSelection){
       
-     playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
-     //playerSelection = playerSelection.toLowerCase();
-     computerSelection = ["rock", "paper", "scissors"];
+   playerSelection = prompt("Do you choose rock, paper or scissors?").toLowerCase();
+     
+   computerSelection = ["rock", "paper", "scissors"];
 
-    computerSelection = Math.floor(Math.random() * computerSelection.length);
+   computerSelection = Math.floor(Math.random() * computerSelection.length);
    
      if (computerSelection == [0]){
    
@@ -103,43 +55,43 @@ console.log(computerPlay(computerSelection));
 
           tied++
 
-          alert (/*document.getElementById("round").innerHTML=*/"Game drawn, play again?");
+          alert ("Game drawn, play again?");
            
       } else if (computerSelection == "rock" && playerSelection == "paper"){
 
          playerWins++
 
-         alert (/*document.getElementById("round").innerHTML=*/ "You win - Paper beats Rock");
+         alert ("You win - Paper beats Rock");
          
       } else if (computerSelection == "scissors" && playerSelection == "paper"){
 
           computerWins++
           
-          alert (/*document.getElementById("round").innerHTML=*/"You lose, Scissors beats paper");
+          alert ("You lose, Scissors beats paper");
 
       }  else if (computerSelection == "paper" && playerSelection == "scissors") {
 
        playerWins++
 
-       alert (/*document.getElementById("round").innerHTML=*/"You win, Scissors beats Paper");
+       alert ("You win, Scissors beats Paper");
    
       } else if (computerSelection == "scissors" && playerSelection == "rock") {
 
       playerWins++
 
-      alert (/*document.getElementById("round").innerHTML=*/"You win, Rock beats Scissors");
+      alert ("You win, Rock beats Scissors");
 
       } else if (computerSelection == "rock" && playerSelection == "scissors"){
 
           computerWins++;
 
-          alert (/*document.getElementById("round").innerHTML=*/"You lose, Rock beats Scissors");
+          alert ("You lose, Rock beats Scissors");
       
       } else if (computerSelection == "paper" && playerSelection == "rock"){
 
          computerWins++
 
-        alert (/*document.getElementById("round").innerHTML=*/ "You lose - Paper beats Rock");
+        alert ("You lose - Paper beats Rock");
       }
    };
 
@@ -151,11 +103,7 @@ console.log(computerPlay(computerSelection));
         }
         if (i=4) {
            alert ("lets see who won");
-           gameWinner(playerWins, computerWins);
-          // toggle_visibility(button);
-           //location.reload(); 
-          // winner(playerWins, computerWins);
-           
+           gameWinner(playerWins, computerWins); 
         }
       };
            
@@ -193,22 +141,6 @@ console.log(computerPlay(computerSelection));
    
    }; 
 
-   
-   /*function winner(playerWins, computerWins) {
-
-      if (playerWins < computerWins) {
-
-       return document.getElementById("winner").innerHTML='computer has ' +  computerWins;
-
-      } else if (playerWins > computerWins) {
-
-       return document.getElementById("winner").innerHTML='player has ' + playerWins;
-      } else {
-
-       return  document.getElementById("winner").innerHTML='games tied ' + tied;
-      }
-   };*/
-   
 
   
 
